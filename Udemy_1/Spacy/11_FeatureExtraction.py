@@ -31,6 +31,7 @@ count_vect = CountVectorizer()
 X_train_count = count_vect.fit_transform(X_train)
 
 print(X_train.head())
+print(X_train[0])
 print(X_train_count[0])
 
 tfidf_transformer = TfidfTransformer()
