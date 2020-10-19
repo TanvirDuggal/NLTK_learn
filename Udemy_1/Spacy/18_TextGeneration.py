@@ -30,6 +30,7 @@ def seperatePunc(text):
     return [token.text.lower() for token in nlp(text) if token.text not in '\n\n \n\n\n!\"-#$%&()--.*+,-/:;<=>?@[\\\\]^_`{|}~\\t\\n']
             
 d = getFiles('moby_dick_four_chapters.txt')
+print(d)
 token = seperatePunc(d)
 
 print(len(token))
@@ -43,6 +44,7 @@ for i in range(textLen, len(token)):
     textSeq.append(seq)
     
 print(textSeq[0])
+print(textSeq)
 
 tokenizer = Tokenizer()
 tokenizer.fit_on_texts(textSeq)

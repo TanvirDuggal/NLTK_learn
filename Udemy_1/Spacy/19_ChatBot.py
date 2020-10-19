@@ -94,6 +94,8 @@ questions = Input((maxQuesLen,))
 
 vocab_size = len(vocab) + 1
 
+print(vocab_size)
+
 input_seq_m = Sequential()
 input_seq_m.add(Embedding(input_dim=vocab_size, output_dim=64))
 input_seq_m.add(Dropout(0.3))
@@ -133,7 +135,7 @@ model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['ac
 
 model.summary()
 
-history = model.fit([input_train, query_train], ans_train, batch_size=32, epochs=3, validation_data=([input_test, query_test], ans_test))
+history = model.fit([input_train, query_train], ans_train, batch_size=32, epochs=30, validation_data=([input_test, query_test], ans_test))
 
 pred_res = model.predict(([input_test, query_test]))
 

@@ -9,7 +9,7 @@ Created on Thu Aug 13 21:40:28 2020
 import spacy
 nlp = spacy.load('en_core_web_lg')
 
-from scipy import spatial
+from scipy import spatial1
 
 # --------- Getting vector form of words and doc
 vec = nlp('king').vector

@@ -8,6 +8,7 @@ Created on Thu Aug  6 22:20:29 2020
 
 import spacy
 from spacy import displacy
+spacy.prefer_gpu()
 nlp = spacy.load("en_core_web_sm")
 
 text = "Hello world this is the first Spacy program I am writing"
