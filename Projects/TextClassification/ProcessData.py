@@ -19,6 +19,7 @@ nlp = spacy.load("en_core_web_sm")
 class ProcessData:
     df     = ''
     txtSeq = []
+    maxSeq = 0
     
     def __init__(self, df):
         self.df = df
