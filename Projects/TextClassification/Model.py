@@ -27,7 +27,6 @@ class Model:
         classifier.add(Dropout(0.3))
         classifier.add(Dense(50, activation='relu'))
         classifier.add(Dropout(0.3))
-        classifier.add(Dropout(0.3))
         classifier.add(Dense(units=1))
         classifier.compile(optimizer='adam', loss='binary_crossentropy')
         self.classifier = classifier
